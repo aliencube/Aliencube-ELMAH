@@ -17,7 +17,7 @@ namespace Aliencube.Elmah.Web.UI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            ControllerBuilder.Current.SetControllerFactory(new ElmahControllerFactory());
+            //ControllerBuilder.Current.SetControllerFactory(new ElmahControllerFactory());
         }
     }
 }
