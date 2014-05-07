@@ -8,6 +8,9 @@ namespace Aliencube.Elmah.Mvc.Factories
     /// <summary>
     /// This represents the controller factory entity inherited from <c>DefaultControllerFactory</c> and registered for ELMAH.
     /// </summary>
+    /// <remarks>
+    /// http://dotnetdarren.wordpress.com/2010/07/27/logging-on-mvc-part-1/
+    /// </remarks>
     public class ElmahControllerFactory : DefaultControllerFactory
     {
         /// <summary>

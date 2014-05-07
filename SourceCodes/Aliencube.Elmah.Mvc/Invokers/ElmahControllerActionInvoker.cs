@@ -6,6 +6,9 @@ namespace Aliencube.Elmah.Mvc.Invokers
     /// <summary>
     /// This represents an entity responsible for invoking the action methods of a controller.
     /// </summary>
+    /// <remarks>
+    /// http://dotnetdarren.wordpress.com/2010/07/27/logging-on-mvc-part-1/
+    /// </remarks>
     public class ElmahControllerActionInvoker : ControllerActionInvoker
     {
         private readonly IExceptionFilter _filter;
