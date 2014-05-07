@@ -151,6 +151,12 @@
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aliencube.Elmah.Mvc\Aliencube.Elmah.Mvc.csproj">
+      <Project>{343031b7-4a65-41d0-869a-d3f43cfc10e7}</Project>
+      <Name>Aliencube.Elmah.Mvc</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

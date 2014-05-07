@@ -3,7 +3,7 @@ using System;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Aliencube.Elmah.Mvc
+namespace Aliencube.Elmah.Mvc.Attributes
 {
     /// <summary>
     /// This represents the error handling attribute entity with ELMAH.
