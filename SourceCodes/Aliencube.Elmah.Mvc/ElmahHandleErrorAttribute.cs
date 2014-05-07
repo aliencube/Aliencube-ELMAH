@@ -13,6 +13,10 @@ namespace Aliencube.Elmah.Mvc
     /// </remarks>
     public class ElmahHandleErrorAttribute : HandleErrorAttribute
     {
+        /// <summary>
+        /// Called when an exception occurs.
+        /// </summary>
+        /// <param name="filterContext">The action-filter context.</param>
         public override void OnException(ExceptionContext filterContext)
         {
             base.OnException(filterContext);
@@ -28,6 +32,11 @@ namespace Aliencube.Elmah.Mvc
             LogException(ex);
         }
 
+        /// <summary>
+        /// Raises the error signal so that ELMAH can handle it.
+        /// </summary>
+        /// <param name="ex">Exception instance.</param>
+        /// <returns>Returns <c>True</c>, if signal is raised; otherwise returns <c>False</c>.</returns>
         private static bool RaiseErrorSignal(Exception ex)
         {
             var context = HttpContext.Current;
@@ -42,6 +51,11 @@ namespace Aliencube.Elmah.Mvc
             return true;
         }
 
+        /// <summary>
+        /// Checks whether the exception is filtered or not.
+        /// </summary>
+        /// <param name="filterContext">The action-filter context.</param>
+        /// <returns>Returns <c>True</c>, if the exception is filtered; otherwise returns <c>False</c>.</returns>
         private static bool IsFiltered(ExceptionContext filterContext)
         {
             var config = filterContext.HttpContext.GetSection("elmah/errorFilter") as ErrorFilterConfiguration;
@@ -53,6 +67,10 @@ namespace Aliencube.Elmah.Mvc
             return config.Assertion.Test(testContext);
         }
 
+        /// <summary>
+        /// Logs the exception details through ELMAH.
+        /// </summary>
+        /// <param name="ex">Exception instance.</param>
         private static void LogException(Exception ex)
         {
             var context = HttpContext.Current;
