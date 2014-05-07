@@ -75,6 +75,8 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Attributes\ElmahHandleErrorAttribute.cs" />
+    <Compile Include="Invokers\ElmahControllerActionInvoker.cs" />
+    <Compile Include="Factories\ElmahControllerFactory.cs" />
     <Compile Include="Filters\ElmahExceptionFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
